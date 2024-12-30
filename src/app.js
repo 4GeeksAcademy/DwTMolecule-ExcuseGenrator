@@ -14,22 +14,20 @@ window.onload = function() {
     "en el avion",
     "en la sala"
   ];
-
-  console.log(who[Math.floor(Math.random() * who.length)]);
-  console.log(action[Math.floor(Math.random() * action.length)]);
-  console.log(what[Math.floor(Math.random() * what.length)]);
-  console.log(when[Math.floor(Math.random() * when.length)]);
+  function getRandomElement(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
 
   let excuse =
-    who[Math.floor(Math.random() * who.length)] +
+    getRandomElement(who) +
     " " +
-    action[Math.floor(Math.random() * action.length)] +
+    getRandomElement(action) +
     " " +
-    what[Math.floor(Math.random() * what.length)] +
+    getRandomElement(what) +
     " " +
-    when[Math.floor(Math.random() * when.length)] +
+    getRandomElement(when) +
     ".";
-  console.log(excuse);
+
   document.getElementById("excuse").innerHTML = excuse;
 };
 document.getElementById("excuse");
